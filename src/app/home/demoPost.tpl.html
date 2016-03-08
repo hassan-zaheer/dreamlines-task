@@ -1,0 +1,24 @@
+<div class="demo-post-wrapper">
+	<h3>Title: {{post.title}} <small>by user: {{post.userId}}</small></h3>
+	<p ng-bind="post.body"></p>
+	
+	<i class="glyphicon glyphicon glyphicon-comment"></i>
+	
+	<span ng-if="!comments.length">Loading comments...</span>
+	
+	<span ng-if="comments.length" ng-bind="' Total Comments: ' + comments.length"></span>
+	
+	<div>
+		<button class="btn btn-default" ng-if="comments.length > 0 && !showComments" ng-click="showHideComments()">Show Comments</button>
+		<button class="btn btn-default" ng-if="comments.length > 0 && showComments" ng-click="showHideComments()">Hide Comments</button>
+	</div>
+	
+	<div class="comments-container row" ng-show="comments.length > 0 && showComments">
+		
+		<div class="col-xs-12">
+			<demo-post-comment ng-repeat="comment in comments" comment="comment"></demo-post-comment>
+		</div>
+	
+	</div>
+
+</div>

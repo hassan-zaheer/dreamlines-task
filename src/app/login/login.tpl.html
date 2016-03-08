@@ -1,0 +1,22 @@
+<div class="container-fluid login-wrapper">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-4">
+            <form role="form" name="login" ng-submit="loginUser()">
+              <div class="form-group">
+                <label for="email">Username: {{temp}}</label>
+                <input type="text" class="form-control" id="username" ng-model="username" required>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" /> Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+              <span ng-if="signingIn">Please wait...</span>
+            </form>
+            <div role="alert" ng-repeat="alert in alerts" class="alert" ng-class="alert.type">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span>{{alert.msg}}</span>
+              <span class="glyphicon glyphicon-remove" ng-click="closeAlert($index);"></span>
+            </div>
+        </div>
+    </div>
+</div>

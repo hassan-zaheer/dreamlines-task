@@ -1,0 +1,75 @@
+.jumbotron {
+  margin: 40px 0 80px 0;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 55px;
+    line-height: 1;
+  }
+
+  .lead {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+.marketing {
+  .row {
+    margin-bottom: 10px;
+  }
+
+  .row:last-child {
+    margin-bottom: 0;
+  }
+  
+  h4 [class*=" icon-"], h4 [class^="icon-"] {
+    margin-right: 5px;
+    vertical-align: -10%;
+    font-size: 28px;
+    line-height: 1;
+  }
+}
+
+.post-form {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+  
+  &.show-form {
+    height: 182px;
+  }
+
+  &.hide-form {
+    height: 0;
+  }
+}
+
+demo-post {
+  .demo-post-wrapper {
+    .comments-btn {
+      cursor: pointer;
+      color: @link-color;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    button.btn-default {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .comments-container {
+      padding: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+  }
+}
+
